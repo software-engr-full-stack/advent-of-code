@@ -5,9 +5,7 @@ class TestDay < Test::Unit::TestCase
   def test_calc
     tests = [
       { fbname: 'test.input', expected: 4361 },
-
-      # Too low: 492628, 493479
-      { fbname: 'actual.input', expected: 0 }
+      { fbname: 'actual.input', expected: 535_078 }
     ]
 
     tests.each do |test_item|

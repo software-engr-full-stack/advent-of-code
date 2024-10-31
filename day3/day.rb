@@ -96,10 +96,8 @@ class Day # rubocop:disable Metrics/ClassLength
   def adjacent_to_left?(char_ix, row)
     return false if char_ix.zero?
 
-    rev_row = row.reverse[(matrix_row_length - char_ix)..]
-    (rev_row.count - 1).downto(0) do |ix|
-      char = rev_row[ix]
-
+    (char_ix - 1).downto(0) do |ix|
+      char = row[ix]
       return false if char == NOTHING_CHAR
 
       return true if symbol?(char)
