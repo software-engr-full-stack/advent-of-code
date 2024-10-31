@@ -24,7 +24,7 @@ class Day
     end
   end
 
-  def calc(str)
+  def part1(str)
     total = 0
     bag_to_be_checked = string_to_bag(str)
     record_of_games.each do |record|
@@ -43,6 +43,28 @@ class Day
       end
 
       total += game if is_valid_game
+    end
+
+    total
+  end
+
+  def part2
+    total = 0
+    record_of_games.each do |record|
+      record => {sets:}
+      max = {}
+      sets.each do |set|
+        set.each do |key, value|
+          if max[key]
+            max[key] = [max[key], value].max
+            next
+          end
+
+          max[key] = value
+        end
+      end
+
+      total += max.values.inject(&:*)
     end
 
     total
