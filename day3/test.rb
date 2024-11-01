@@ -19,10 +19,8 @@ class TestDay < Test::Unit::TestCase
 
   def test_part2
     tests = [
-      # { fbname: 'test.input', expected: 467_835 },
-      # { fbname: 'actual.input', expected: -1 }
-
-      { fbname: 'debug.input', expected: -1 }
+      { fbname: 'test.input', expected: 467_835 },
+      { fbname: 'actual.input', expected: 75_312_571 }
     ]
 
     tests.each do |test_item|
